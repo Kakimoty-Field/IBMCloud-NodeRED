@@ -3,99 +3,99 @@
 
 <!-- Table of Contents -->
 
-## �J���E���s������
-1. IBM Cloud �Ƀ��O�C�����܂��B<br>
-���O�C����ʂŃ��[�U�p�X���[�h����͂���Ɓu�_�b�V���{�[�h�v���\������܂��B <br>
-�u���\�[�X�̒ǉ��v�{�^�����N���b�N���A�J�^���O��ʂ�\�����܂��B
+## 開発・実行環境準備
+1. IBM Cloud にログインします。<br>
+ログイン画面でユーザパスワードを入力すると「ダッシュボード」が表示されます。 <br>
+「リソースの追加」ボタンをクリックし、カタログ画面を表示します。
 ![](./img/010.png)
 
 
-2. Node-RED App �̌��� <br>
-[�J�^���O������...] �ƕ\������Ă���G���A�� `node-red` �Ɠ��͂��܂��B����ƁA`Node-RED App` �̌�₪�\�������̂ŃN���b�N���܂��B
+2. Node-RED App の検索 <br>
+[カタログを検索...] と表示されているエリアに `node-red` と入力します。すると、`Node-RED App` の候補が表示されるのでクリックします。
 ![](./img/030.png)
 
-3. �A�v���̍쐬�P <br>
-Node-RED �A�v���̍쐬��ʂ��\������܂��B���e���m�F���������ŁA��ʏ㕔�u�쐬�v�^�u���N���b�N���܂�
+3. アプリの作成１ <br>
+Node-RED アプリの作成画面が表示されます。内容を確認したうえで、画面上部「作成」タブをクリックします
 ![](./img/040.png)
 
-4. �A�v���̍쐬�Q <br>
-Node-RED �A�v����ݒ肵�܂��B�u�A�v�����v�̗��ɂ͔C�ӂ̃A�v���P�[�V����������͂��܂��B���T�[�r�X�ڍׁ��́u���[�W�����́u�_���X�v��I�����܂��B�ݒ肪�I������u�쐬�v�{�^�����N���b�N���܂��B
+4. アプリの作成２ <br>
+Node-RED アプリを設定します。「アプリ名」の欄には任意のアプリケーション名を入力します。＜サービス詳細＞の「リージョンは「ダラス」を選択します。設定が終ったら「作成」ボタンをクリックします。
 ![](./img/060.png)
 
-5. �A�v���̍쐬�R <br>
-�A�v���쐬����������܂łP���قǑ҂��܂�
+5. アプリの作成３ <br>
+アプリ作成が完了するまで１分ほど待ちます
 ![](./img/070.png)
 
-6. �A�v���̃f�v���C�P <br>
-�A�v���̍쐬����������ƁA�u�A�v���̏ڍׁv��ʂɐ؂�ւ��܂��B��ʉ����́u�A�v���̃f�v���C�v�{�^�����N���b�N�ł���悤�ɂȂ�܂ŁA�Q�`�R���قǑ҂��܂�
+6. アプリのデプロイ１ <br>
+アプリの作成が完了すると、「アプリの詳細」画面に切り替わります。画面下部の「アプリのデプロイ」ボタンがクリックできるようになるまで、２～３分ほど待ちます
 ![](./img/080.png)
 
-7. �A�v���̃f�v���C�Q <br>
-�u�A�v���̃f�v���C�v�{�^�����L���ɂȂ�����A�N���b�N���܂��B
+7. アプリのデプロイ２ <br>
+「アプリのデプロイ」ボタンが有効になったら、クリックします。
 ![](./img/090.png)
 
-8. �A�v���̃f�v���C�R <br>
-���f�v���C�����g��������ʁ��� `IBM Cloud API ��` ��ݒ肵�܂��B���͗��̉E�ɂ���u�V�K�{�v�{�^�����N���b�N���܂��B
+8. アプリのデプロイ３ <br>
+＜デプロイメント自動化画面＞で `IBM Cloud API 鍵` を設定します。入力欄の右にある「新規＋」ボタンをクリックします。
 ![](./img/100.png)
 
-9. �A�v���̃f�v���C�S(API�L�[�쐬�_�C�A���O) <br>
-API ���쐬�̃_�C�A���O���\�������̂ŁA`OK` �{�^�����N���b�N�� API �����쐬���܂��B
+9. アプリのデプロイ４(APIキー作成ダイアログ) <br>
+API 鍵作成のダイアログが表示されるので、`OK` ボタンをクリックし API 鍵を作成します。
 ![](./img/110.png)
 
-10. �A�v���̃f�v���C�T <br>
-���f�v���C�����g��������ʁ��ɖ߂�̂ŁA��ʍŉ����́u���ցv�{�^�����L���ɂȂ�̂�҂��Ă���N���b�N���܂��B
+10. アプリのデプロイ５ <br>
+＜デプロイメント自動化画面＞に戻るので、画面最下部の「次へ」ボタンが有効になるのを待ってからクリックします。
 ![](./img/120.png)
 
-11. �A�v���̃f�v���C�U <br>
-��DevOpps �c�[���`�F�[���̍\������ʂŁA��ʉ����́u�쐬�v�{�^�����N���b�N���܂��B
+11. アプリのデプロイ６ <br>
+＜DevOpps ツールチェーンの構成＞画面で、画面下部の「作成」ボタンをクリックします。
 ![](./img/130.png)
 
-12. �A�v���̃f�v���C�V <br>
-���A�v���̏ڍׁ���ʂɖ߂�̂ŁA��ʉ����u�f�v���C�����g�������v�� <�󋵃X�e�[�^�X>�� **����** �ɂȂ�܂ŁA�T���قǑ҂��܂��B
+12. アプリのデプロイ７ <br>
+＜アプリの詳細＞画面に戻るので、画面下部「デプロイメント自動化」の <状況ステータス>が **成功** になるまで、５分ほど待ちます。
 ![](./img/140.png)
 ![](./img/160.png)
 
-13. Node-RED �Z�b�g�A�b�v�P <br>
-Node-RED �̏����������Ă���̂ŁA��ʍ���́u�n���o�[�K�[���j���v���� `�_�b�V���{�[�h` ��I�����܂��B
+13. Node-RED セットアップ１ <br>
+Node-RED の準備が整っているので、画面左上の「ハンバーガーメニュ」から `ダッシュボード` を選択します。
 ![](./img/170.png)
 
-14. Node-RED �Z�b�g�A�b�v�Q <br>
-���_�b�V���{�[�h���ŁA`Cloud Foundry �A�v��` ���N���b�N���܂��B
+14. Node-RED セットアップ２ <br>
+＜ダッシュボード＞で、`Cloud Foundry アプリ` をクリックします。
 ![](./img/200.png)
 
-15. Node-RED �Z�b�g�A�b�v�R <br>
-�����\�[�X�E���X�g����ʂŁANode-RED �̃A�v����I�����܂��B
+15. Node-RED セットアップ３ <br>
+＜リソース・リスト＞画面で、Node-RED のアプリを選択します。
 ![](./img/210.png)
 
-16. Node-RED �Z�b�g�A�b�v�S <br>
-Cloud Foundry �A�v�� �ڍ׉�ʂŁA��ʏ�ɂ��� `�A�v��URL�ɃA�N�Z�X` ���N���b�N���܂��B
+16. Node-RED セットアップ４ <br>
+Cloud Foundry アプリ 詳細画面で、画面上にある `アプリURLにアクセス` をクリックします。
 ![](./img/220.png)
 
-17. Node-RED �Z�b�g�A�b�v�T <br>
-Node-RED �A�v�����ʃE�C���h�E�i�ʃ^�u�j�ŕ\������܂��B��ʉ����́uNext�v�{�^�����N���b�N���܂��B
+17. Node-RED セットアップ５ <br>
+Node-RED アプリが別ウインドウ（別タブ）で表示されます。画面下部の「Next」ボタンをクリックします。
 ![](./img/300.png)
 
-18. Node-RED �Z�b�g�A�b�v�U <br>
-Node-RED �Ƀ��O�C�����邽�߂́A���[�U���ƃp�X���[�h��ݒ肵�܂��B���[�U�F�ؖ����ŗ��p���邱�Ƃ��\�ł����A��������v���O�����t���[��ҏW�ł����ԂɂȂ��Ă��܂��̂ŁA���[�U�p�X���[�h��ݒ肷�邱�Ƃ��I�X�X�����܂��B
+18. Node-RED セットアップ６ <br>
+Node-RED にログインするための、ユーザ名とパスワードを設定します。ユーザ認証無しで利用することも可能ですが、だれもがプログラムフローを編集できる状態になってしまうので、ユーザパスワードを設定することをオススメします。
 ![](./img/310.png)
 
-19. Node-RED �Z�b�g�A�b�v�V <br>
-�m�[�h�̒ǉ��ɂ��Đ������\�������̂ŁA��ʉ����́uNext�v�{�^�����N���b�N���܂��B
+19. Node-RED セットアップ７ <br>
+ノードの追加について説明が表示されるので、画面下部の「Next」ボタンをクリックします。
 ![](./img/320.png)
 
-20. Node-RED �Z�b�g�A�b�v�W <br>
-Node-RED �̃Z�b�g�A�b�v�����ƁA���[�U�p�X���[�h�̕ύX�Ɋւ���������\������܂��B���e���m�F���������ŉ�ʉ����́uFinish�v�{�^�����N���b�N���܂��B
+20. Node-RED セットアップ８ <br>
+Node-RED のセットアップ完了と、ユーザパスワードの変更に関する説明が表示されます。内容を確認したうえで画面下部の「Finish」ボタンをクリックします。
 ![](./img/330.png)
 
-21. Node-RED ���s <br>
-���΂炭�҂� Node-RED �̃g�b�v��ʂ��\������܂��B�uGo to your Node-RED flow Editor�v�{�^�����N���b�N���܂��B
+21. Node-RED 実行 <br>
+しばらく待つと Node-RED のトップ画面が表示されます。「Go to your Node-RED flow Editor」ボタンをクリックします。
 ![](./img/350.png)
 
-22. Node-RED ���s <br>
-Node-RED �̃��O�C����ʂ��\�������̂ŁA�Z�b�g�A�b�v���ɐݒ肵�����[�U�p�X���[�h����͂��A�u���O�C���v�{�^�����N���b�N���܂��B
+22. Node-RED 実行 <br>
+Node-RED のログイン画面が表示されるので、セットアップ時に設定したユーザパスワードを入力し、「ログイン」ボタンをクリックします。
 ![](./img/360.png)
 
-23. Node-RED ���s <br>
-Node-RED �t���[�G�f�B�^�[���\������܂��BNode-RED �̃X�e�L�Ȑ��E�����y���݂����������I
+23. Node-RED 実行 <br>
+Node-RED フローエディターが表示されます。Node-RED のステキな世界をお楽しみくださいっ！
 ![](./img/370.png)
 
