@@ -1,0 +1,102 @@
+[
+  {
+    "id": "eaba2180.961ca",
+    "type": "tab",
+    "label": "LanguageTranslator",
+    "disabled": false,
+    "info": ""
+  },
+  {
+    "id": "db39c091.51dc",
+    "type": "inject",
+    "z": "eaba2180.961ca",
+    "name": "",
+    "props": [
+      {
+        "p": "payload"
+      },
+      {
+        "p": "topic",
+        "vt": "str"
+      }
+    ],
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "onceDelay": 0.1,
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "x": 150,
+    "y": 140,
+    "wires": [
+      [
+        "abe8ba0c.7046c8"
+      ]
+    ]
+  },
+  {
+    "id": "d8ce8331.8627",
+    "type": "watson-translator",
+    "z": "eaba2180.961ca",
+    "name": "",
+    "action": "translate",
+    "basemodel": "ar-en",
+    "domain": "general",
+    "srclang": "ja",
+    "destlang": "en",
+    "password": "",
+    "apikey": "",
+    "custom": "",
+    "domainhidden": "general",
+    "srclanghidden": "ja",
+    "destlanghidden": "en",
+    "basemodelhidden": "ar-en",
+    "customhidden": "",
+    "filetype": "forcedglossary",
+    "trainid": "",
+    "lgparams2": true,
+    "service-endpoint": "",
+    "x": 210,
+    "y": 280,
+    "wires": [
+      [
+        "708894ec.d23cbc"
+      ]
+    ]
+  },
+  {
+    "id": "abe8ba0c.7046c8",
+    "type": "function",
+    "z": "eaba2180.961ca",
+    "name": "",
+    "func": "msg.payload = \"今日はいい天気です\";\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "x": 220,
+    "y": 220,
+    "wires": [
+      [
+        "d8ce8331.8627"
+      ]
+    ]
+  },
+  {
+    "id": "708894ec.d23cbc",
+    "type": "debug",
+    "z": "eaba2180.961ca",
+    "name": "",
+    "active": true,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "false",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 320,
+    "y": 360,
+    "wires": []
+  }
+]
