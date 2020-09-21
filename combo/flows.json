@@ -1,0 +1,551 @@
+[
+    {
+        "id": "b3e63edc.db66b",
+        "type": "tab",
+        "label": "01-Visual Recognition",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "965ecaff.89fab8",
+        "type": "tab",
+        "label": "02-Language Translator",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "349c7217.e6b6fe",
+        "type": "tab",
+        "label": "03-Text to Speech",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "2c793483.c691ec",
+        "type": "tab",
+        "label": "組み合わせ",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "3fd44dd4.9d6032",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey"
+            }
+        },
+        "site": {
+            "name": "Node-RED ダッシュボード",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "YYYY/MM/DD",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "b1b11140.4e4ef",
+        "type": "inject",
+        "z": "b3e63edc.db66b",
+        "name": "",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "topic": "",
+        "payload": "Hello Node-RED!",
+        "payloadType": "string",
+        "x": 380,
+        "y": 40,
+        "wires": [
+            [
+                "f2f2649a.0d0d98"
+            ]
+        ]
+    },
+    {
+        "id": "f2f2649a.0d0d98",
+        "type": "debug",
+        "z": "b3e63edc.db66b",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "result",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 730,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "54e09f94.39c39",
+        "type": "camera",
+        "z": "b3e63edc.db66b",
+        "name": "",
+        "x": 150,
+        "y": 120,
+        "wires": [
+            [
+                "ff850190.b84e6",
+                "66b565db.1bad3c"
+            ]
+        ]
+    },
+    {
+        "id": "65caabbd.0f6d84",
+        "type": "fileinject",
+        "z": "b3e63edc.db66b",
+        "name": "",
+        "x": 140,
+        "y": 180,
+        "wires": [
+            [
+                "ff850190.b84e6"
+            ]
+        ]
+    },
+    {
+        "id": "ff850190.b84e6",
+        "type": "image",
+        "z": "b3e63edc.db66b",
+        "name": "",
+        "width": 160,
+        "data": "payload",
+        "dataType": "msg",
+        "thumbnail": false,
+        "active": true,
+        "pass": false,
+        "outputs": 0,
+        "x": 360,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "66b565db.1bad3c",
+        "type": "visual-recognition-v3",
+        "z": "b3e63edc.db66b",
+        "name": "",
+        "vr-service-endpoint": "https://api.us-south.visual-recognition.watson.cloud.ibm.com/instances/1f022c25-af1d-4d20-9c08-239c19b2d9db",
+        "image-feature": "classifyImage",
+        "lang": "en",
+        "x": 370,
+        "y": 120,
+        "wires": [
+            [
+                "f2f2649a.0d0d98"
+            ]
+        ]
+    },
+    {
+        "id": "55ff3aee.0e5444",
+        "type": "watson-translator",
+        "z": "965ecaff.89fab8",
+        "name": "",
+        "action": "translate",
+        "basemodel": "ar-en",
+        "domain": "general",
+        "srclang": "en",
+        "destlang": "ja",
+        "password": "",
+        "apikey": "yWEcUgLMEYUL9Uf13jHCsJwhXTz3ul-1x14Rl9uxkvV9",
+        "custom": "",
+        "domainhidden": "general",
+        "srclanghidden": "en",
+        "destlanghidden": "ja",
+        "basemodelhidden": "ar-en",
+        "customhidden": "",
+        "filetype": "forcedglossary",
+        "trainid": "",
+        "lgparams2": true,
+        "service-endpoint": "https://api.us-south.language-translator.watson.cloud.ibm.com/instances/64bd1428-d1e1-4e00-8de0-7c4a7f2683b8",
+        "x": 410,
+        "y": 140,
+        "wires": [
+            [
+                "ddaf085d.4f2028"
+            ]
+        ]
+    },
+    {
+        "id": "a6c62c9f.64adf",
+        "type": "inject",
+        "z": "965ecaff.89fab8",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 140,
+        "y": 40,
+        "wires": [
+            [
+                "a1d0f5b5.d208e8"
+            ]
+        ]
+    },
+    {
+        "id": "ddaf085d.4f2028",
+        "type": "debug",
+        "z": "965ecaff.89fab8",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 650,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "a1d0f5b5.d208e8",
+        "type": "function",
+        "z": "965ecaff.89fab8",
+        "name": "",
+        "func": "msg.payload = \"Abe, who just four days earlier had set a record of staying in power for 2,799 consecutive days, will leave office without achieving his long-cherished goal of amending the pacifist Constitution or welcoming the Tokyo Olympics while still the country’s leader\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 360,
+        "y": 40,
+        "wires": [
+            [
+                "55ff3aee.0e5444"
+            ]
+        ]
+    },
+    {
+        "id": "8607ca94.60f228",
+        "type": "watson-text-to-speech",
+        "z": "349c7217.e6b6fe",
+        "name": "",
+        "lang": "",
+        "langhidden": "",
+        "langcustom": "",
+        "langcustomhidden": "",
+        "voice": "",
+        "voicehidden": "",
+        "format": "audio/wav",
+        "password": "",
+        "apikey": "",
+        "payload-response": false,
+        "service-endpoint": "",
+        "x": 400,
+        "y": 140,
+        "wires": [
+            [
+                "6d69d6c6.e02678"
+            ]
+        ]
+    },
+    {
+        "id": "6d69d6c6.e02678",
+        "type": "play audio",
+        "z": "349c7217.e6b6fe",
+        "name": "",
+        "voice": "",
+        "x": 650,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "29389985.84a856",
+        "type": "inject",
+        "z": "349c7217.e6b6fe",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 140,
+        "y": 40,
+        "wires": [
+            [
+                "44381e01.8eaea"
+            ]
+        ]
+    },
+    {
+        "id": "44381e01.8eaea",
+        "type": "function",
+        "z": "349c7217.e6b6fe",
+        "name": "",
+        "func": "msg.payload = \"Abe, who just four days earlier had set a record of staying in power for 2,799 consecutive days, will leave office without achieving his long-cherished goal of amending the pacifist Constitution or welcoming the Tokyo Olympics while still the country’s leader\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 360,
+        "y": 40,
+        "wires": [
+            [
+                "8607ca94.60f228"
+            ]
+        ]
+    },
+    {
+        "id": "682a42ce.1fc9fc",
+        "type": "camera",
+        "z": "2c793483.c691ec",
+        "name": "",
+        "x": 110,
+        "y": 40,
+        "wires": [
+            [
+                "2603d274.22000e"
+            ]
+        ]
+    },
+    {
+        "id": "2603d274.22000e",
+        "type": "visual-recognition-v3",
+        "z": "2c793483.c691ec",
+        "name": "",
+        "vr-service-endpoint": "https://api.us-south.visual-recognition.watson.cloud.ibm.com/instances/1f022c25-af1d-4d20-9c08-239c19b2d9db",
+        "image-feature": "classifyImage",
+        "lang": "en",
+        "x": 390,
+        "y": 40,
+        "wires": [
+            [
+                "e457e1c0.fe87"
+            ]
+        ]
+    },
+    {
+        "id": "22255ed8.f7ad92",
+        "type": "watson-translator",
+        "z": "2c793483.c691ec",
+        "name": "",
+        "action": "translate",
+        "basemodel": "ar-en",
+        "domain": "general",
+        "srclang": "en",
+        "destlang": "ja",
+        "password": "",
+        "apikey": "yWEcUgLMEYUL9Uf13jHCsJwhXTz3ul-1x14Rl9uxkvV9",
+        "custom": "",
+        "domainhidden": "general",
+        "srclanghidden": "en",
+        "destlanghidden": "ja",
+        "basemodelhidden": "ar-en",
+        "customhidden": "",
+        "filetype": "forcedglossary",
+        "trainid": "",
+        "lgparams2": true,
+        "service-endpoint": "https://api.us-south.language-translator.watson.cloud.ibm.com/instances/64bd1428-d1e1-4e00-8de0-7c4a7f2683b8",
+        "x": 490,
+        "y": 240,
+        "wires": [
+            [
+                "25a33a05.392d36",
+                "c145acc9.49035"
+            ]
+        ]
+    },
+    {
+        "id": "e457e1c0.fe87",
+        "type": "function",
+        "z": "2c793483.c691ec",
+        "name": "",
+        "func": "msg.payload = msg.result.images[0].classifiers[0].classes[0].class;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 380,
+        "y": 140,
+        "wires": [
+            [
+                "22255ed8.f7ad92"
+            ]
+        ]
+    },
+    {
+        "id": "25a33a05.392d36",
+        "type": "watson-text-to-speech",
+        "z": "2c793483.c691ec",
+        "name": "",
+        "lang": "ja-JP",
+        "langhidden": "ja-JP",
+        "langcustom": "NoCustomisationSetting",
+        "langcustomhidden": "",
+        "voice": "ja-JP_EmiV3Voice",
+        "voicehidden": "",
+        "format": "audio/wav",
+        "password": "",
+        "apikey": "OsqIsqwUg3Bzr4U71Ji6u6od97c0ZRBSXXBzLH--3Le4",
+        "payload-response": false,
+        "service-endpoint": "https://api.us-south.text-to-speech.watson.cloud.ibm.com/instances/f961562d-4cda-45e3-b6e3-17960f1eaef8",
+        "x": 680,
+        "y": 320,
+        "wires": [
+            [
+                "ff68aecc.5c0aa"
+            ]
+        ]
+    },
+    {
+        "id": "6e13e633.d86f88",
+        "type": "play audio",
+        "z": "2c793483.c691ec",
+        "name": "",
+        "voice": "",
+        "x": 910,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "ff68aecc.5c0aa",
+        "type": "change",
+        "z": "2c793483.c691ec",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "speech",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 830,
+        "y": 380,
+        "wires": [
+            [
+                "6e13e633.d86f88"
+            ]
+        ]
+    },
+    {
+        "id": "c145acc9.49035",
+        "type": "debug",
+        "z": "2c793483.c691ec",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 650,
+        "y": 140,
+        "wires": []
+    }
+]
