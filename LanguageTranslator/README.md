@@ -101,14 +101,16 @@ Node-RED と Watson API を連携させる方法はいくつかあります。
 Watson API の管理画面から `資格情報` の `「API 鍵」` をコピーします。
 ![](./img/140.png)
 
-Node-RED フローエディタを表示し、ワークスペースに配置してある`[language translator]`ノードをダブルクリックします。 **API key** を入力する欄があるので、貼り付けます。
+Node-RED フローエディタを表示し、ワークスペースに配置してある`[language translator]`ノードをダブルクリックします。   
+**API key** を入力する欄があるので、貼り付けます。
 ![](./img/160.png)
 
 ### EndPoint-URLの組み込み
 Watson API の管理画面から `資格情報` の `「URL」` をコピーします。
 ![](./img/170.png)
 
-Node-RED フローエディタを表示し、ワークスペースに配置してある`[language translator]`ノードをダブルクリックします。 **Service Endpoint** を入力する欄があるので、貼り付けます。
+Node-RED フローエディタを表示し、ワークスペースに配置してある`[language translator]`ノードをダブルクリックします。  
+**Service Endpoint** を入力する欄があるので、貼り付けます。
 ![](./img/180.png)
 
 ## Node-REDでWatson-LanguageTranslator体験
