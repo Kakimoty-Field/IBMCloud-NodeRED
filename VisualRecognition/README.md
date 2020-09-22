@@ -2,23 +2,25 @@
 - [はじめに](#はじめに)
 - [Node-REDパレット管理](#Node-REDパレット管理)
     - [ノード追加](#ノード追加)
+      - [node-red-contrib-browser-utils](#node-red-contrib-browser-utils)
+      - [node-red-contrib-image-output](#node-red-contrib-image-output)
 - [Node-REDフロー作成](#Node-REDフロー作成)
-    - [injectノード](#injectノード)
-    - [text to speechノード](#text-to-speechノード)
-    - [play audioノード](#play-audioノード)
-    - [functionノード](#functionノード)
+    - [cameraノード](#cameraノード)
+    - [imageノード](#imageノード)
+    - [visual recognitionノード](#visual-recognitionノード)
+    - [debugノード](#debugノード)
+    - [デバッグ設定](#デバッグ設定)
     - [ノード接続](#ノード接続)
-    - [少しコーディング](#少しコーディング)
-    - [音声設定](#音声設定)
-- [Text-To-Speech-API準備](#Text-To-Speech-API準備)
+- [Visual-Recognition-API準備](#Visual-Recognition-API準備)
     - [リソースの作成](#リソースの作成)    
     - [API情報表示](#API情報表示)
-- [Node-REDへText to Speech組み込み](#Node-REDへText-to-Speech組み込み)
+- [Node-REDへVisual Recognition組み込み](#Node-REDへVisual-Recognition組み込み)
     - [API鍵の組み込み](#API鍵の組み込み)
     - [EndPoint-URLの組み込み](#EndPoint-URLの組み込み)
-- [Node-REDでWatson-Text to Speech体験](#Node-REDでWatson-Text-to-Speech体験)
-    - [流し込むテキストと音声の言語設定](#流し込むテキストと音声の言語設定)
+- [Node-REDでWatson Visual Recognition体験](#Node-REDでWatson-Visual-Recognition体験)
+    - [画像認識結果の言語設定](#画像認識結果の言語設定)
     - [デプロイ](#デプロイ)
+- [実行](#実行)
 - [終わりに](#終わりに)
 
 <!-- Table of Contents -->
@@ -88,31 +90,23 @@ Node-RED のフローを流れるイメージを表示するノード
 パレット中段の「出力 タブ」から `image` ノードをワークスペースにドラッグします。
 ![](./img/110.png)
 
-
 ### visual recognitionノード
 パレット下部の「IBM Watson タブ」から `visual recognition` ノードをワークスペースにドラッグします。
 ![](./img/120.png)
 
-
 ### debugノード
 パレット上部の「共通 タブ」から `debug` ノードをワークスペースにドラッグします。
-
 ![](./img/130.png)
-
 
 ### デバッグ設定
 画像認識結果をデバッグサイドバーに表示するために、`debug` ノードの設定を変更します。  
 `debug` ノードをダブルクリックし、デバッグの `対象`を **msg.result** になるように設定します
-
 ![](./img/150.png)
 
-
 ### ノード接続
-`[camera]`⇒`[image]`
+`[camera]`⇒`[image]`  
 `[camera]`⇒`[visual recognition]`⇒`[debug]` の順にノードを接続します。
-
 ![](./img/160.png)
-
 
 
 ## Visual-Recognition-API準備
@@ -158,7 +152,7 @@ Node-RED フローエディタを表示し、ワークスペースに配置し�
 **Service Endpoint** を入力する欄があるので、貼り付けます。
 ![](./img/270.png)
 
-## Node-REDでWatson-Text to Speech体験
+## Node-REDでWatson Visual Recognition体験
 Node-RED と Visual Recognition の連携は完了したので、Watson の機能を試してみます。
 
 ### 画像認識結果の言語設定
