@@ -1,0 +1,90 @@
+[
+    {
+        "id": "21b5aebc.57f182",
+        "type": "tab",
+        "label": "SpeechToText",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "c0752a1d.497c78",
+        "type": "inject",
+        "z": "21b5aebc.57f182",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 130,
+        "y": 100,
+        "wires": [
+            [
+                "2dfe2829.d3a278"
+            ]
+        ]
+    },
+    {
+        "id": "92222e40.5c658",
+        "type": "watson-text-to-speech",
+        "z": "21b5aebc.57f182",
+        "name": "",
+        "lang": "en-US",
+        "langhidden": "en-US",
+        "langcustom": "NoCustomisationSetting",
+        "langcustomhidden": "",
+        "voice": "en-US_EmilyV3Voice",
+        "voicehidden": "en-US_EmilyV3Voice",
+        "format": "audio/wav",
+        "password": "",
+        "apikey": "",
+        "payload-response": false,
+        "service-endpoint": "",
+        "x": 170,
+        "y": 300,
+        "wires": [
+            [
+                "dc948956.dd4d98"
+            ]
+        ]
+    },
+    {
+        "id": "dc948956.dd4d98",
+        "type": "play audio",
+        "z": "21b5aebc.57f182",
+        "name": "",
+        "voice": "1",
+        "x": 180,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "2dfe2829.d3a278",
+        "type": "function",
+        "z": "21b5aebc.57f182",
+        "name": "",
+        "func": "msg.payload = \"I have a pen.\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 150,
+        "y": 220,
+        "wires": [
+            [
+                "92222e40.5c658"
+            ]
+        ]
+    }
+]
